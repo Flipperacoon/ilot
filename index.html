@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet IVF - Diagnostic du Lac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Déterminez l'îlot végétalisé idéal pour votre lac</h1>
+    <form id="diagnostic-form">
+        <label for="surface">Surface du lac (m²) :</label>
+        <input type="number" id="surface" name="surface" required>
+        
+        <label for="phosphore">Concentration en phosphore (mg/L) :</label>
+        <input type="number" id="phosphore" name="phosphore" required>
+
+        <button type="submit">Obtenir des recommandations</button>
+    </form>
+    
+    <div id="resultats"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
