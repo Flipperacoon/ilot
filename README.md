@@ -2,7 +2,7 @@
 
 HI! FRIENDS!
 THIS PROJECT IS DESIGNED TO HELP NAVIGATE THE COMPLEXITIES OF ENVIRONMENTAL RULES AND REGULATIONS starting with floating islands for water filtration in CANADA. Later on, I would like to make it more international, and with more types of projects!
-In the end, you would be to be able to submit your location, a given set of parameters, and then, the website would help you know what permits and authorizations you need to ask from your governement and/or municipality to ensure the compliance with local environmental norms.
+In the end, you would be able to submit your location, a given set of parameters (project description), and then, the website would help you know what permits and authorizations you need to ask from your governement and/or municipality to ensure the compliance with local environmental norms.
 
 
 LET'S DEFEAT THE RED TAPE AND HAVE MORE PROJECTS GOING !!!!!🐟
