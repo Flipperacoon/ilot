@@ -6,20 +6,142 @@
     <title>Projet IVF - Diagnostic du Lac</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Déterminez l'îlot végétalisé idéal pour votre lac</h1>
-    <form id="diagnostic-form">
-        <label for="surface">Surface du lac (m²) :</label>
-        <input type="number" id="surface" name="surface" required>
-        
-        <label for="phosphore">Concentration en phosphore (mg/L) :</label>
-        <input type="number" id="phosphore" name="phosphore" required>
-
-        <button type="submit">Obtenir des recommandations</button>
-    </form>
     
-    <div id="resultats"></div>
+    <body>
+    <h1>Déterminez l'îlot végétalisé idéal pour votre lac 🦆</h1>
+    
+    <!-- Common radio buttons for activity selection -->
+<fieldset>
+  <legend>Quel type d’activité souhaitez-vous mener ?</legend>
+  <input
+    type="radio"
+    name="activite"
+    value="bachage"
+    id="activite_bachage"
+  />
+  <label for="activite_bachage">Bachage</label>
 
-    <script src="script.js"></script>
-</body>
-</html>
+  <input
+    type="radio"
+    name="activite"
+    value="ilot_flottant"
+    id="activite_ilot"
+  />
+  <label for="activite_ilot">Îlot flottant</label>
+</fieldset>
+<br />
+
+<!-- Form for Bachage -->
+<form id="form-bachage" style="display: none;">
+  <!-- Bachage specific fields -->
+  <label for="surfaceBachage"
+    >Quelle superficie souhaitez-vous traiter ? (m²)</label
+  >
+  <input type="number" id="surfaceBachage" name="surfaceBachage" /><br />
+
+  <label>Vos travaux sont-ils réalisés dans le littoral ?</label><br />
+  <input type="radio" name="littoral" value="oui" id="littoral_oui" />
+  <label for="littoral_oui">Oui</label>
+  <input type="radio" name="littoral" value="non" id="littoral_non" />
+  <label for="littoral_non">Non</label>
+  <br />
+
+  <label>
+    Vos travaux visent-ils à maintenir les fonctions écologiques des milieux
+    humides et contrôler les risques ?
+  </label>
+  <br />
+  <input
+    type="radio"
+    name="travauxEcologiques"
+    value="oui"
+    id="travauxOui"
+  />
+  <label for="travauxOui">Oui</label>
+  <input
+    type="radio"
+    name="travauxEcologiques"
+    value="non"
+    id="travauxNon"
+  />
+  <label for="travauxNon">Non</label>
+  <br />
+
+  <label>
+    La zone à traiter est-elle dominée par des espèces floristiques
+    envahissantes ?
+  </label>
+  <br />
+  <input type="radio" name="invasives" value="oui" id="invasives_oui" />
+  <label for="invasives_oui">Oui</label>
+  <input type="radio" name="invasives" value="non" id="invasives_non" />
+  <label for="invasives_non">Non</label>
+  <br />
+
+  <button type="submit">Obtenir des recommandations</button>
+</form>
+
+<!-- Form for Îlot flottant -->
+<form id="form-ilot" style="display: none;">
+  <!-- You may need to include the common "surface" input if required by your diagnostic. 
+       If the diagnostic expects document.getElementById("surface"), then include it here.
+       For example: -->
+  <label for="surface">Surface du lac (m²) :</label>
+  <input type="number" id="surface" name="surface" required /><br />
+
+  <label for="phosphore">Concentration en phosphore (mg/L) :</label>
+  <input type="number" id="phosphore" name="phosphore" required /><br />
+
+  <label for="polluants"
+    >Quels polluants sont présents ? (Sélection multiple)</label
+  >
+  <select id="polluants" name="polluants" multiple>
+    <option value="hydrocarbures">Hydrocarbures</option>
+    <option value="metaux_lourds">Métaux lourds</option>
+    <option value="azote">Azote</option>
+  </select>
+  <br />
+
+  <!-- Pollutant concentration fields (initially hidden) -->
+  <div id="concentrations" style="display: none;">
+    <div class="polluant-group" id="group_hydrocarbures">
+      <label for="conc_hydrocarbures"
+        >Concentration en hydrocarbures (mg/L) :</label
+      >
+      <input
+        type="number"
+        id="conc_hydrocarbures"
+        name="conc_hydrocarbures"
+      /><br />
+    </div>
+
+    <div class="polluant-group" id="group_metaux_lourds">
+      <label for="conc_metaux">Concentration en métaux lourds (mg/L) :</label>
+      <input type="number" id="conc_metaux" name="conc_metaux" /><br />
+    </div>
+
+    <div class="polluant-group" id="group_azote">
+      <label for="conc_azote">Concentration en azote (mg/L) :</label>
+      <input type="number" id="conc_azote" name="conc_azote" /><br />
+    </div>
+  </div>
+
+  <label>Est-ce une zone protégée ?</label>
+  <br />
+  <input type="radio" name="zone_protegee" value="oui" id="zoneOui" />
+  <label for="zoneOui">Oui</label>
+  <input type="radio" name="zone_protegee" value="non" id="zoneNon" />
+  <label for="zoneNon">Non</label>
+  <br />
+
+  <button type="submit">Obtenir des recommandations</button>
+</form>
+
+<!-- A container to display the results -->
+<div id="resultats"></div>
+        
+
+<script src="script.js"></script>
+        
+        </body>
+    </html>
