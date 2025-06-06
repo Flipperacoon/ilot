@@ -76,9 +76,9 @@ function executeDiagnostic(type) {
 
             message += `<p>Deux options sont possibles pour combattre l’eutrophisation de votre plan d’eau :</p>
                         <ul>
-                            <li><strong>${tailleIlotRapide} m²</strong> (7%) → Traitement rapide et complet, correspondant à environ <strong>${nombrePlantesRapide} plantes</strong>.</li>
-                            <li><strong>${tailleIlotMoyen} m²</strong> (3%) → Rétablissement à moyen terme, correspondant à environ <strong>${nombrePlantesMoyen} plantes</strong>.</li>
-                        <p> Un projet d'ilot flottant phytoepurateur rentre dans la catégorie gestion des eaux : <i>établissement, modification ou extension d’un système 
+                            <li><strong>${tailleIlotRapide} m²</strong> (7%) -> Traitement rapide et complet, correspondant à environ <strong>${nombrePlantesRapide} plantes</strong>.</li>
+                            <li><strong>${tailleIlotMoyen} m²</strong> (3%) -> Rétablissement à moyen terme, correspondant à environ <strong>${nombrePlantesMoyen} plantes</strong>.</li>
+                            <p> Un projet d'ilot flottant phytoepurateur rentre dans la catégorie gestion des eaux : <i>établissement, modification ou extension d’un système 
                             d’aqueduc, d’un système d’égout et d’un système de gestion des eaux pluviales, 
                             ainsi que l’installation et l’exploitation de tout autre appareil ou équipement 
                             destiné à traiter les eaux </i>, ce qui correspond a un declencheur d autorisation ministérielle en vertu de l'article 22 de la LQE 
@@ -86,7 +86,7 @@ function executeDiagnostic(type) {
                             (177, 190, 217, 188))</i><br>
                             
                             Lien vers les demandes de permis -><a href="url">https://www.environnement.gouv.qc.ca/autorisations/autorisations-ministerielles.htmt</a>
-                            </ul>`;
+                        </ul>`;
         } else {
             message += `<p style="color: red;">⚠️ Veuillez entrer des valeurs valides pour la surface et la concentration en phosphore.</p>`;
         }
